@@ -1,20 +1,26 @@
 {
   "name": "ottonova-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Ottonova Node JS Application",
+  "main": "index.ts",
   "scripts": {
-    "dev": "nodemon server.js",
+    "start": "node src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "type": "module",
+  "author": "Sarfaraz",
+  "type": "commonjs",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.12",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5"
   }
 }
