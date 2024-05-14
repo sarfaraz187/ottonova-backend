@@ -2,7 +2,7 @@
   "watch": ["server"],
   "ext": "ts",
   "ignore": ["*.test.ts"],
-  "delay": "3",
+  "delay": "0",
   "execMap": {
     "ts": "ts-node"
   }
