@@ -1,8 +1,15 @@
-var express = require("express");
-var app = express();
-app.get("/", function (req, res) {
-  res.send("Hello World!");
+import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const app = express();
+const port = process.env.PORT;
+
+app.get("/", (req, res) => {
+  res.send("Express + TypeScript Server");
 });
-app.listen(3000, function () {
-  console.log("Nodemon running in port 3000!");
+
+app.listen(port, () => {
+  console.log(`[server]: Server is running at http://localhost:${port}`);
 });
