@@ -1,3 +1,4 @@
+import cors from "cors";
 import dotenv from "dotenv";
 import express, { Express } from "express";
 import useCityRoute from "./routes/city.ts";
@@ -6,6 +7,7 @@ dotenv.config();
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use("/api/v1/cities", useCityRoute);
 
 app.listen(port, () => {
