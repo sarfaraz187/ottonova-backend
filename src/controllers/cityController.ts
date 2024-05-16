@@ -8,6 +8,7 @@ export const getAllCities = (req: Request, res: Response) => {
 };
 
 export const getCityById = (req: Request, res: Response) => {
+  console.log(req);
   if (!req.params?.id) res.status(404);
   const foundCity = citiesJson.cities.find((cityObj) => cityObj.id == Number(req.params.id));
   foundCity ? res.json(foundCity) : res.status(404);
