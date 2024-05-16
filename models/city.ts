@@ -1,4 +1,5 @@
 export type City = {
+  id: number;
   name: string;
   name_native: string;
   country: string;
@@ -8,4 +9,5 @@ export type City = {
   population: string;
   founded: string;
   landmarks: string[];
+  thumbnails?: string[];
 };
