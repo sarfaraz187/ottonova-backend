@@ -4,7 +4,6 @@ import citiesJson from "../data/cities.json";
 const cities: City[] = citiesJson.cities;
 
 export const getAllCities = (req: Request, res: Response) => {
-  console.log("Triggered");
   res.json(cities);
 };
 
@@ -15,7 +14,7 @@ export const getCityById = (req: Request, res: Response) => {
 
     if (!foundCity) throw new Error("City not found");
     res.json(foundCity);
-  } catch (error) {
+  } catch (error: any) {
     res.status(404).send({
       status: 404,
       message: error.message,
