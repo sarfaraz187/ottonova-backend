@@ -1,7 +1,7 @@
 export type City = {
   id: number;
   name: string;
-  name_native: string;
+  native: string;
   country: string;
   continent: string;
   latitude: string;

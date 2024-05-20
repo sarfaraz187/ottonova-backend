@@ -3,7 +3,7 @@
     {
       "id": 78320144,
       "name": "Sydney",
-      "name_native": "Sydney",
+      "native": "Sydney",
       "country": "Australia",
       "continent": "Australia",
       "latitude": "-33.865143",
@@ -21,7 +21,7 @@
     {
       "id": 14680272,
       "name": "New York City",
-      "name_native": "New York City",
+      "native": "New York City",
       "country": "USA",
       "continent": "North America",
       "latitude": "40.730610",
@@ -39,7 +39,7 @@
     {
       "id": 50443405,
       "name": "Madrid",
-      "name_native": "Madrid",
+      "native": "Madrid",
       "country": "Spain",
       "continent": "Europe",
       "latitude": "40.416775",
@@ -57,7 +57,7 @@
     {
       "id": 84200014,
       "name": "Moscow",
-      "name_native": "Москва",
+      "native": "Москва",
       "country": "Russia",
       "continent": "Europe",
       "latitude": "55.751244",
@@ -75,7 +75,7 @@
     {
       "id": 38246106,
       "name": "Tokyo",
-      "name_native": "東京",
+      "native": "東京",
       "country": "Japan",
       "continent": "Asia",
       "latitude": "35.652832",
@@ -93,7 +93,7 @@
     {
       "id": 65365621,
       "name": "Lagos",
-      "name_native": "Lagos",
+      "native": "Lagos",
       "country": "Nigeria",
       "continent": "Africa",
       "latitude": "6.465422",
@@ -111,7 +111,7 @@
     {
       "id": 35181001,
       "name": "Sao Paulo",
-      "name_native": "São Paulo",
+      "native": "São Paulo",
       "country": "Brazil",
       "continent": "South America",
       "latitude": "-23.533773",
@@ -129,7 +129,7 @@
     {
       "id": 97235864,
       "name": "Munich",
-      "name_native": "München",
+      "native": "München",
       "country": "Germany",
       "continent": "Europe",
       "latitude": "48.137154",
