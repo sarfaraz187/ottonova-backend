@@ -1,12 +1,14 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express, { Express } from "express";
+import { setCache } from "./utils/cacheMiddleware.ts";
 import useCityRoute from "./routes/city.ts";
 
 dotenv.config();
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
+app.use(setCache);
 app.use(cors());
 app.use("/api/v1/cities", useCityRoute);
 
