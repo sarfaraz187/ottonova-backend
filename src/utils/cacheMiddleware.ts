@@ -4,7 +4,7 @@ export const setCache = function (req: Request, res: Response, next: NextFunctio
   const period = 60 * 5;
 
   if (req.method === "GET") {
-    res.set("Cache-control", `public, max-age=${period}`);
+    res.set("Cache-control", `public, max-age=${period}, must-revalidate`);
   } else {
     res.set("Cache-control", "no-store");
   }
