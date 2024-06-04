@@ -4,6 +4,13 @@ import citiesJson from "../data/cities.json";
 const cities: City[] = citiesJson.cities;
 
 export const getAllCities = (req: Request, res: Response) => {
+  console.log(req, "Query :", req.query);
+
+  if (req.query?.name) {
+    getCityByQuery(req, res);
+    return;
+  }
+
   if (cities.length > 0) {
     res.status(200).json({ status: "success", cities });
   } else {
@@ -14,6 +21,7 @@ export const getAllCities = (req: Request, res: Response) => {
 export const getCityById = (req: Request, res: Response) => {
   try {
     const cityId = req.params?.id;
+    console.log(req.query);
 
     if (!cityId) return res.status(400).json({ status: "fail", message: "City ID is missing." });
 
@@ -21,6 +29,22 @@ export const getCityById = (req: Request, res: Response) => {
     if (!foundCity) return res.status(404).json({ status: "fail", message: "City not found" });
 
     return res.status(200).json({ status: "success", city: foundCity });
+  } catch (error) {
+    return res.status(500).json({ status: "error", message: "Internal Server Error" });
+  }
+};
+
+export const getCityByQuery = (req: Request, res: Response) => {
+  try {
+    if (req.query && req.query?.name) {
+      const filteredCities = citiesJson.cities.filter((cityObj) => cityObj.name.includes(req?.query?.name as string));
+      console.log("Filtered Cities :", filteredCities);
+      if (filteredCities.length > 0) {
+        res.status(200).json({ status: "success", results: filteredCities });
+      } else {
+        return res.status(404).json({ status: "fail", message: "Empty search results" });
+      }
+    }
   } catch (error) {
     return res.status(500).json({ status: "error", message: "Internal Server Error" });
   }
